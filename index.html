@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen active" id="start-screen">
+            <h1 class="screen-txt">Quiz Time</h1>
+            <p>Test your knowledge with these fun questions.</p>
+            <button class="start-btn" id="start-btn">Start Quiz</button>
+        </div>
+        <div class="screen" id="quiz-screen">
+            <div class="quiz-header">
+                <h2 id="question-txt">Question goes here</h2>
+                <div class="quiz-info">
+                    <p id="question-text">Question <span class="current-question" id="current-question">0</span> out of
+                        <span class="total-question" id="total-questions"></span>
+                    </p>
+                    <p>Score : <span class="score-info" id="score">0</span></p>
+                </div>
+            </div>
+            <div class="answer-container" id="answer-container">
+                <!--- answers will be generated here -->
+                <button class="answer-btn">London</button>
+            </div>
+            <div class="progress-bar" id="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        <div class="screen" id="result-screen">
+            <h1>Quiz Score</h1>
+            <div class="result-info">
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score"></span></p>
+                <p class="result-message" id="result-message">Good Job!</p>
+            </div>
+            <button class="restart-btn" id="restart-btn">Restart Quiz</button>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
