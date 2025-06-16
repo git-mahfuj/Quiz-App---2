@@ -172,6 +172,8 @@ function startQuiz() {
     showQuestions()
 }
 function showQuestions() {
+    currentQuestionSpan.textContent = currentQuestionIndex+1;
+
     answersDisabled = false;
     startScreen.classList.remove('active');
     quizScreen.classList.add('active');
@@ -193,7 +195,6 @@ function showQuestions() {
     })
 }
 function selectAnswer(e) {
-    currentQuestionSpan.textContent = currentQuestionIndex+1;
     if (answersDisabled) return
     answersDisabled = true;
     const selectedButton = e.target;
@@ -242,10 +243,7 @@ function showResult() {
 
 
 function restartQuiz() {
-    console.log("quizRestarted")
     resultScreen.classList.remove("active");
-
-    startQuiz();
 }
 
 
